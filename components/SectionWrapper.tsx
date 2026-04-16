@@ -7,11 +7,13 @@ interface SectionWrapperProps {
   children: ReactNode;
   className?: string;
   delay?: number;
+  id?: string;
 }
 
-export default function SectionWrapper({ children, className = "", delay = 0 }: SectionWrapperProps) {
+export default function SectionWrapper({ children, className = "", delay = 0, id }: SectionWrapperProps) {
   return (
     <motion.div
+      id={id}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
