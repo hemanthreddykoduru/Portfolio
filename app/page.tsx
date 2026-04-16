@@ -74,11 +74,16 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-neutral-200 font-medium max-w-2xl leading-relaxed mx-auto drop-shadow-md">
               Full-Stack Developer • Web Developer • Tech Enthusiast
             </p>
-            <div className="mt-12 animate-bounce">
-              <a href="#projects" className="text-white/80 hover:text-white transition-colors">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-                </svg>
+            <div className="mt-16 flex flex-col items-center gap-3">
+              <a href="#projects" className="group flex flex-col items-center gap-3 transition-colors">
+                <p className="text-[10px] font-display font-bold uppercase tracking-[0.3em] text-white/40 group-hover:text-white/80 transition-colors">
+                  Scroll down
+                </p>
+                <div className="animate-bounce p-2 rounded-full border border-white/10 group-hover:border-white/30 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/60 group-hover:text-white transition-colors">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                  </svg>
+                </div>
               </a>
             </div>
           </div>
