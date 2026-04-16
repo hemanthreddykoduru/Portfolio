@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
@@ -8,6 +12,19 @@ import { projects } from "../data/projects";
 import { Server, Layout, Database, Wrench, Code2, Monitor } from "lucide-react";
 
 export default function Home() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname === "/projects") {
+      const el = document.getElementById("projects");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else if (pathname === "/about") {
+      const el = document.getElementById("about");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [pathname]);
   const skills = [
     {
       category: "Frontend",
