@@ -67,8 +67,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10"></div>
 
           {/* Hero Content */}
-          <div className="relative z-20 px-6 max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-8xl font-display font-black tracking-tighter mb-6 text-white drop-shadow-2xl leading-tight">
+          <div className="relative z-20 px-6 max-w-5xl mx-auto">
+            <h1 className="text-5xl md:text-8xl font-display font-black tracking-tighter mb-6 text-white drop-shadow-2xl leading-tight md:whitespace-nowrap">
               Koduru Hemanth Reddy
             </h1>
             <p className="text-lg md:text-2xl text-neutral-200 font-medium max-w-2xl leading-relaxed mx-auto drop-shadow-md">
