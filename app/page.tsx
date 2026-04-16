@@ -29,17 +29,17 @@ export default function Home() {
   const skills = [
     {
       category: "Frontend",
-      icon: <Layout className="w-5 h-5 text-black" />,
+      icon: <Layout className="w-5 h-5" />,
       items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"]
     },
     {
       category: "Backend",
-      icon: <Server className="w-5 h-5 text-black" />,
+      icon: <Server className="w-5 h-5" />,
       items: ["Node.js", "Express", "Firebase Auth", "Firestore", "RESTful APIs"]
     },
     {
       category: "Tools & Extras",
-      icon: <Database className="w-5 h-5 text-black" />,
+      icon: <Database className="w-5 h-5" />,
       items: ["Git", "Postman", "Vercel", "Firebase Hosting", "Cloudflare"]
     }
   ];
