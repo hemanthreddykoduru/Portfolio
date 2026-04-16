@@ -8,8 +8,8 @@ export default function Navbar() {
           KHR
         </Link>
         <div className="flex gap-8 text-sm font-semibold text-neutral-800">
-          <Link href="/#projects" className="hover:text-black transition-colors">Projects</Link>
-          <Link href="/#about" className="hover:text-black transition-colors">About</Link>
+          <Link href="/projects" className="hover:text-black transition-colors font-black uppercase tracking-widest text-[10px]">Projects</Link>
+          <Link href="/#about" className="hover:text-black transition-colors font-black uppercase tracking-widest text-[10px]">About</Link>
           <a href="/resume.pdf" target="_blank" className="hover:text-black transition-colors">Resume</a>
         </div>
       </div>

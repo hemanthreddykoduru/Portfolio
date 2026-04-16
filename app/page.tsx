@@ -57,7 +57,7 @@ export default function Home() {
               Full-Stack Developer • Web Developer • Tech Enthusiast
             </p>
             <div className="mt-12 animate-bounce">
-              <a href="#projects" className="text-white/80 hover:text-white transition-colors">
+              <a href="#recent-work" className="text-white/80 hover:text-white transition-colors">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
                 </svg>
@@ -66,16 +66,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Grid */}
-        <SectionWrapper id="projects" className="max-w-5xl mx-auto px-6 py-24 border-t border-neutral-100">
+        {/* Projects Grid Preview */}
+        <SectionWrapper id="recent-work" className="max-w-5xl mx-auto px-6 py-24 border-t border-neutral-100">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2 font-display">Selected Work</h2>
-              <p className="text-3xl font-display font-black tracking-tight text-black">Recent Projects</p>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2 font-display">Featured</h2>
+              <p className="text-3xl font-display font-black tracking-tight text-black">Case Studies</p>
             </div>
+            <Link 
+              href="/projects" 
+              className="text-xs font-black uppercase tracking-widest border-b-2 border-neutral-100 hover:border-black transition-all pb-1 mb-1"
+            >
+              View All Projects →
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, idx) => (
+            {projects.slice(0, 3).map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
