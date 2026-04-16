@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
