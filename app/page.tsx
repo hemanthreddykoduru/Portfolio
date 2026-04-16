@@ -67,11 +67,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-10"></div>
 
           {/* Hero Content */}
-          <div className="relative z-20 px-6">
-            <h1 className="text-5xl md:text-8xl font-display font-black tracking-tighter mb-6 text-white drop-shadow-2xl">
+          <div className="relative z-20 px-6 max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-8xl font-display font-black tracking-tighter mb-6 text-white drop-shadow-2xl leading-tight">
               Koduru Hemanth Reddy
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-200 font-medium max-w-2xl leading-relaxed mx-auto drop-shadow-md">
+            <p className="text-lg md:text-2xl text-neutral-200 font-medium max-w-2xl leading-relaxed mx-auto drop-shadow-md">
               Full-Stack Developer • Web Developer • Tech Enthusiast
             </p>
             <div className="mt-16 flex flex-col items-center gap-3">
@@ -90,7 +90,7 @@ export default function Home() {
         </section>
 
         {/* Projects Grid */}
-        <SectionWrapper id="projects" className="max-w-5xl mx-auto px-6 py-24 border-t border-neutral-100">
+        <SectionWrapper id="projects" className="max-w-5xl mx-auto px-6 py-16 md:py-24 border-t border-neutral-100">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
               <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2 font-display">Selected Work</h2>
@@ -105,13 +105,13 @@ export default function Home() {
         </SectionWrapper>
 
         {/* Skills Section */}
-        <SectionWrapper className="bg-neutral-50 border-y border-neutral-100 py-24">
+        <SectionWrapper className="bg-neutral-50 border-y border-neutral-100 py-16 md:py-24">
           <div className="max-w-5xl mx-auto px-6">
             <div className="mb-12">
               <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2 font-display">Expertise</h2>
               <p className="text-3xl font-display font-black tracking-tight text-black">Technical Skills</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {skills.map((skillGroup) => (
                 <div key={skillGroup.category} className="p-8 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-6">

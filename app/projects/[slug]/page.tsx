@@ -25,72 +25,72 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Project Header */}
         <section className="max-w-5xl mx-auto px-6 pt-24 md:pt-32 pb-12">
           <Link 
-            href="/#projects" 
-            className="text-neutral-500 hover:text-black mb-8 inline-flex items-center group transition-colors text-sm font-bold"
+            href="/projects" 
+            className="text-neutral-500 hover:text-black mb-8 inline-flex items-center group transition-colors text-sm font-bold uppercase tracking-widest"
           >
-            <span className="mr-2 group-hover:-translate-x-1 transition-transform">←</span> Back to Projects
+            <span className="mr-2 group-hover:-translate-x-1 transition-transform">←</span> Back
           </Link>
-          <h1 className="text-4xl md:text-8xl font-black text-black tracking-tighter mb-4">
+          <h1 className="text-4xl md:text-8xl font-display font-black text-black tracking-tighter mb-4 leading-none">
             {project.name}
           </h1>
-          <p className="text-xl md:text-2xl text-neutral-500 font-medium leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-2xl text-neutral-500 font-medium leading-relaxed max-w-2xl">
             {project.tagline}
           </p>
         </section>
 
         {/* Project Hero Image */}
         <div className="max-w-6xl mx-auto px-6">
-          <div className="relative w-full aspect-video md:aspect-[21/9] bg-white overflow-hidden rounded-3xl border border-neutral-100 shadow-2xl transition-all duration-500">
+          <div className="relative w-full aspect-video md:aspect-[21/9] bg-white overflow-hidden rounded-2xl md:rounded-3xl border border-neutral-100 shadow-2xl transition-all duration-500">
             <Image 
               src={project.image}
               alt={project.name}
               fill
-              className="object-contain p-4 md:p-8"
+              className="object-contain p-2 md:p-8"
               priority
             />
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-6 py-12 md:py-24">
           {/* Info Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 pb-16 border-b border-neutral-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-16 md:mb-20 pb-12 md:pb-16 border-b border-neutral-100">
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">Role</p>
-              <p className="text-lg font-bold text-black">{project.role}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2 font-display">Role</p>
+              <p className="text-lg font-bold text-black font-display">{project.role}</p>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">Year</p>
-              <p className="text-lg font-bold text-black">{project.year}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2 font-display">Year</p>
+              <p className="text-lg font-bold text-black font-display">{project.year}</p>
             </div>
-            <div className="col-span-2">
-              <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">Tech Stack</p>
+            <div className="sm:col-span-2">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2 font-display">Tech Stack</p>
               <div className="flex flex-wrap gap-2 text-sm font-bold text-neutral-800">
                 {project.stack.join(" • ")}
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16">
             {/* Detailed Content */}
             <div className="lg:col-span-2 space-y-12">
               <section>
-                <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-6 underline decoration-black/10 underline-offset-8">
+                <h2 className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-6 underline decoration-black/10 underline-offset-8 font-display">
                   Project Overview
                 </h2>
                 <div className="prose prose-neutral max-w-none">
-                  <p className="text-xl text-neutral-800 leading-relaxed font-medium">
+                  <p className="text-lg md:text-xl text-neutral-800 leading-relaxed font-medium">
                     {project.fullDescription}
                   </p>
                 </div>
               </section>
 
-              <section className="pt-8">
-                <div className="flex flex-wrap gap-4 mt-12">
+              <section className="pt-4 md:pt-8">
+                <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12">
                   <a 
                     href={project.live} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-neutral-800 transition-all hover:scale-105"
+                    className="inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-neutral-800 transition-all text-sm md:text-base"
                   >
                     Visit Live Site <span className="ml-2">↗</span>
                   </a>
@@ -99,7 +99,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       href={project.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center border-2 border-neutral-200 px-10 py-4 rounded-full font-bold hover:bg-neutral-50 transition-all hover:scale-105 text-neutral-700"
+                      className="inline-flex items-center justify-center border-2 border-neutral-200 px-8 py-4 rounded-full font-bold hover:bg-neutral-50 transition-all text-neutral-700 text-sm md:text-base"
                     >
                       GitHub Repo
                     </a>
