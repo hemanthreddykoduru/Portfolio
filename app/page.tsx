@@ -105,28 +105,39 @@ export default function Home() {
         </SectionWrapper>
 
         {/* Skills Section */}
-        <SectionWrapper className="bg-neutral-50 border-y border-neutral-100 py-16 md:py-24">
+        <SectionWrapper className="bg-black border-y border-white/5 py-24">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="mb-12">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2 font-display">Expertise</h2>
-              <p className="text-3xl font-display font-black tracking-tight text-black">Technical Skills</p>
+            <div className="mb-16">
+              <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40 mb-3 font-display">Specializations</h2>
+              <p className="text-4xl md:text-5xl font-display font-black tracking-tight text-white mb-2">Technical Expertise</p>
+              <div className="w-20 h-1 bg-white/20 rounded-full" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {skills.map((skillGroup) => (
-                <div key={skillGroup.category} className="p-8 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-3 mb-6">
-                    {skillGroup.icon}
-                    <h3 className="font-display font-bold text-lg">{skillGroup.category}</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {skills.map((skillGroup, idx) => (
+                <motion.div 
+                  key={skillGroup.category}
+                  whileHover={{ y: -5 }}
+                  className="group p-8 bg-neutral-900/50 border border-white/10 rounded-[2rem] hover:border-white/30 transition-all duration-500 backdrop-blur-sm"
+                >
+                  <div className="mb-8 flex items-center justify-between">
+                    <div className="p-4 bg-white/5 rounded-2xl group-hover:bg-white text-white group-hover:text-black transition-all duration-500 shadow-xl shadow-black/20">
+                      {skillGroup.icon}
+                    </div>
+                    <span className="text-[10px] font-black text-white/20 uppercase tracking-widest">0{idx + 1}</span>
                   </div>
-                  <ul className="space-y-3">
+                  
+                  <h3 className="font-display font-black text-xl text-white mb-6 tracking-tight">{skillGroup.category}</h3>
+                  
+                  <ul className="space-y-4">
                     {skillGroup.items.map((item) => (
-                      <li key={item} className="flex items-center text-neutral-600 font-medium text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-neutral-300 mr-2" />
+                      <li key={item} className="flex items-center text-neutral-400 group-hover:text-neutral-200 transition-colors font-medium text-sm">
+                        <div className="w-1.5 h-1.5 rounded-full bg-white/20 mr-4 group-hover:bg-white transition-all" />
                         {item}
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
