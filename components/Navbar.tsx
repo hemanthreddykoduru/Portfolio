@@ -2,17 +2,30 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
     { name: "Resume", href: "/resume.pdf", isExternal: true },
   ];
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, targetId: string) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+      setIsOpen(false);
+    }
+  };
 
   return (
     <nav className="sticky top-0 z-[100] w-full border-b border-neutral-200 bg-white/80 backdrop-blur-md">
@@ -36,7 +49,11 @@ export default function Navbar() {
             ) : (
               <Link 
                 key={link.name} 
-                href={link.href} 
+                href={link.href}
+                onClick={(e) => {
+                  if (link.href === "/projects") handleScroll(e, "projects");
+                  if (link.href === "/about") handleScroll(e, "about");
+                }}
                 className="hover:text-black transition-colors font-black uppercase tracking-widest text-[10px] text-neutral-800"
               >
                 {link.name}
@@ -80,7 +97,10 @@ export default function Navbar() {
                   <Link 
                     key={link.name} 
                     href={link.href} 
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => {
+                      if (link.href === "/projects") handleScroll(e, "projects");
+                      if (link.href === "/about") handleScroll(e, "about");
+                    }}
                     className="text-lg font-black uppercase tracking-[0.2em] text-neutral-800 hover:text-black transition-colors"
                   >
                     {link.name}

@@ -16,13 +16,18 @@ export default function Home() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === "/projects") {
-      const el = document.getElementById("projects");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    } else if (pathname === "/about") {
-      const el = document.getElementById("about");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    } else if (pathname === "/") {
+    if (pathname === "/") {
+      const hash = window.location.hash;
+      if (hash) {
+        const id = hash.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+          return;
+        }
+      }
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [pathname]);
