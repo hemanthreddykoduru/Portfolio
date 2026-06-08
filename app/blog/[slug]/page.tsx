@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   li: ({node, ...props}) => <li className="mb-2 text-neutral-800 dark:text-neutral-300 transition-colors" {...props} />,
                   a: ({node, ...props}) => <a className="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline transition-colors" {...props} />,
                   strong: ({node, ...props}) => <strong className="font-black text-black dark:text-white transition-colors" {...props} />,
-                  pre: ({node, ...props}) => <div className="mb-8" {...props} />,
+                  pre: ({node, ref, ...props}: any) => <div className="mb-8" {...props} />,
                   code: ({node, inline, className, children, ...props}: any) => {
                     const match = /language-(\w+)/.exec(className || '');
                     return !inline && match ? (
