@@ -98,25 +98,34 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
             </header>
 
-            <div className="max-w-none text-lg transition-colors">
+            {/* Mobile Tags */}
+            <div className="lg:hidden flex flex-wrap gap-2 mb-10">
+              {blog.tags?.map((tag) => (
+                <span key={tag} className="px-3 py-1 text-[11px] font-mono tracking-wide font-medium text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-900/30 rounded-full border border-emerald-200 dark:border-emerald-800/50 transition-colors">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="max-w-none text-base md:text-lg transition-colors break-words">
               <ReactMarkdown
                 components={{
                   p: ({node, ...props}) => <p className="text-neutral-800 dark:text-neutral-300 leading-relaxed mb-6 transition-colors" {...props} />,
-                  h1: ({node, ...props}) => <h1 className="text-4xl font-display font-black text-black dark:text-white mt-10 mb-6 transition-colors" {...props} />,
+                  h1: ({node, ...props}) => <h1 className="text-3xl md:text-4xl font-display font-black text-black dark:text-white mt-10 mb-6 transition-colors" {...props} />,
                   h2: ({node, children, ...props}: any) => {
                     const id = slugify(String(children));
-                    return <h2 id={id} className="text-3xl font-display font-black text-black dark:text-white mt-10 mb-6 scroll-mt-24 transition-colors" {...props}>{children}</h2>
+                    return <h2 id={id} className="text-2xl md:text-3xl font-display font-black text-black dark:text-white mt-10 mb-6 scroll-mt-24 transition-colors" {...props}>{children}</h2>
                   },
-                  h3: ({node, ...props}) => <h3 className="text-2xl font-display font-black text-black dark:text-white mt-8 mb-4 scroll-mt-24 transition-colors" {...props} />,
+                  h3: ({node, ...props}) => <h3 className="text-xl md:text-2xl font-display font-black text-black dark:text-white mt-8 mb-4 scroll-mt-24 transition-colors" {...props} />,
                   ul: ({node, ...props}) => <ul className="list-disc pl-6 mb-6 text-neutral-800 dark:text-neutral-300 transition-colors" {...props} />,
                   li: ({node, ...props}) => <li className="mb-2 text-neutral-800 dark:text-neutral-300 transition-colors" {...props} />,
-                  a: ({node, ...props}) => <a className="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline transition-colors" {...props} />,
+                  a: ({node, ...props}) => <a className="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline transition-colors break-all" {...props} />,
                   strong: ({node, ...props}) => <strong className="font-black text-black dark:text-white transition-colors" {...props} />,
-                  pre: ({node, ref, ...props}: any) => <div className="mb-8" {...props} />,
+                  pre: ({node, ref, ...props}: any) => <div className="mb-8 overflow-x-auto" {...props} />,
                   code: ({node, inline, className, children, ...props}: any) => {
                     const match = /language-(\w+)/.exec(className || '');
                     return !inline && match ? (
-                      <div className="rounded-2xl overflow-hidden shadow-xl text-sm font-mono border border-neutral-800">
+                      <div className="rounded-2xl overflow-hidden shadow-xl text-xs md:text-sm font-mono border border-neutral-800">
                         <SyntaxHighlighter
                           {...props}
                           style={vscDarkPlus}
@@ -128,7 +137,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         </SyntaxHighlighter>
                       </div>
                     ) : (
-                      <code className="bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white px-1.5 py-0.5 rounded-md font-mono text-sm border border-neutral-200 dark:border-neutral-700 transition-colors" {...props}>
+                      <code className="bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white px-1.5 py-0.5 rounded-md font-mono text-xs md:text-sm border border-neutral-200 dark:border-neutral-700 transition-colors break-words" {...props}>
                         {children}
                       </code>
                     )
