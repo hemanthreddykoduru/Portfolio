@@ -5,14 +5,17 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
+    { name: "Blog", href: "/blog" },
     { name: "Resume", href: "/resume.pdf", isExternal: true },
   ];
 
@@ -28,9 +31,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-[100] w-full border-b border-neutral-200 bg-white/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-[100] w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-black/80 backdrop-blur-md transition-colors">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-black tracking-tighter text-black">
+        <Link href="/" className="text-xl font-black tracking-tighter text-black dark:text-white">
           KHR
         </Link>
         
@@ -42,7 +45,7 @@ export default function Navbar() {
                 key={link.name} 
                 href={link.href} 
                 target="_blank" 
-                className="hover:text-black transition-colors font-black uppercase tracking-widest text-[10px] text-neutral-800"
+                className="hover:text-black dark:hover:text-white transition-colors font-black uppercase tracking-widest text-[10px] text-neutral-800 dark:text-neutral-300"
               >
                 {link.name}
               </a>
@@ -54,12 +57,13 @@ export default function Navbar() {
                   if (link.href === "/projects") handleScroll(e, "projects");
                   if (link.href === "/about") handleScroll(e, "about");
                 }}
-                className="hover:text-black transition-colors font-black uppercase tracking-widest text-[10px] text-neutral-800"
+                className="hover:text-black dark:hover:text-white transition-colors font-black uppercase tracking-widest text-[10px] text-neutral-800 dark:text-neutral-300"
               >
                 {link.name}
               </Link>
             )
           ))}
+          <ThemeToggle />
         </div>
 
         {/* Mobile Toggle */}

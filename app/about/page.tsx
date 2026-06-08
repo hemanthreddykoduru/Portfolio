@@ -7,7 +7,7 @@ import SectionWrapper from "../../components/SectionWrapper";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white selection:bg-neutral-100 font-sans flex flex-col justify-between">
+    <div className="min-h-screen selection:bg-neutral-200 dark:selection:bg-neutral-800 font-sans flex flex-col justify-between transition-colors">
       <Navbar />
       
       <main className="flex-grow">

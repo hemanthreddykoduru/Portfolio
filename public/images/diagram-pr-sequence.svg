@@ -1,0 +1,34 @@
+<svg width="100%" viewBox="0 0 680 520" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Three-PR build sequence for Razorpay integration in InsForge</title>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<g class="c-teal"><rect x="40" y="40" width="180" height="44" rx="8" stroke-width="0.5" fill="#f0fdfa" stroke="#14b8a6"/><text class="th" x="130" y="62" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="bold" font-size="14" fill="#0f766e">PR #1382</text></g>
+<g class="c-teal"><rect x="40" y="100" width="180" height="36" rx="6" stroke-width="0.5" fill="#f0fdfa" stroke="#14b8a6"/><text class="ts" x="130" y="118" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#0f766e">Provider abstraction layer</text></g>
+<g class="c-teal"><rect x="40" y="148" width="180" height="36" rx="6" stroke-width="0.5" fill="#f0fdfa" stroke="#14b8a6"/><text class="ts" x="130" y="166" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#0f766e">Sync: products, plans, customers</text></g>
+<g class="c-teal"><rect x="40" y="196" width="180" height="36" rx="6" stroke-width="0.5" fill="#f0fdfa" stroke="#14b8a6"/><text class="ts" x="130" y="214" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#0f766e">HMAC webhook verification</text></g>
+<g class="c-teal"><rect x="40" y="244" width="180" height="36" rx="6" stroke-width="0.5" fill="#f0fdfa" stroke="#14b8a6"/><text class="ts" x="130" y="262" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#0f766e">Provider-aware migrations</text></g>
+<g class="c-teal"><rect x="40" y="292" width="180" height="36" rx="6" stroke-width="0.5" fill="#f0fdfa" stroke="#14b8a6"/><text class="ts" x="130" y="310" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#0f766e">Dashboard UI</text></g>
+<g class="c-purple"><rect x="250" y="40" width="180" height="44" rx="8" stroke-width="0.5" fill="#faf5ff" stroke="#a855f7"/><text class="th" x="340" y="62" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="bold" font-size="14" fill="#7e22ce">PR #1485</text></g>
+<g class="c-purple"><rect x="250" y="100" width="180" height="36" rx="6" stroke-width="0.5" fill="#faf5ff" stroke="#a855f7"/><text class="ts" x="340" y="118" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#7e22ce">Idempotent event handlers</text></g>
+<g class="c-purple"><rect x="250" y="148" width="180" height="36" rx="6" stroke-width="0.5" fill="#faf5ff" stroke="#a855f7"/><text class="ts" x="340" y="166" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#7e22ce">Webhook secret management</text></g>
+<g class="c-purple"><rect x="250" y="196" width="180" height="36" rx="6" stroke-width="0.5" fill="#faf5ff" stroke="#a855f7"/><text class="ts" x="340" y="214" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#7e22ce">Guided manual setup flow</text></g>
+<g class="c-purple"><rect x="250" y="244" width="180" height="36" rx="6" stroke-width="0.5" fill="#faf5ff" stroke="#a855f7"/><text class="ts" x="340" y="262" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#7e22ce">Automated secret validation</text></g>
+<g class="c-coral"><rect x="460" y="40" width="180" height="44" rx="8" stroke-width="0.5" fill="#fff1f2" stroke="#fb7185"/><text class="th" x="550" y="62" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="bold" font-size="14" fill="#be123c">PR #1490</text></g>
+<g class="c-coral"><rect x="460" y="100" width="180" height="36" rx="6" stroke-width="0.5" fill="#fff1f2" stroke="#fb7185"/><text class="ts" x="550" y="118" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#be123c">RazorpayCheckoutService</text></g>
+<g class="c-coral"><rect x="460" y="148" width="180" height="36" rx="6" stroke-width="0.5" fill="#fff1f2" stroke="#fb7185"/><text class="ts" x="550" y="166" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#be123c">PostgreSQL advisory locking</text></g>
+<g class="c-coral"><rect x="460" y="196" width="180" height="36" rx="6" stroke-width="0.5" fill="#fff1f2" stroke="#fb7185"/><text class="ts" x="550" y="214" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#be123c">ON CONFLICT DO NOTHING</text></g>
+<g class="c-coral"><rect x="460" y="244" width="180" height="36" rx="6" stroke-width="0.5" fill="#fff1f2" stroke="#fb7185"/><text class="ts" x="550" y="262" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#be123c">RLS migrations</text></g>
+<g class="c-coral"><rect x="460" y="292" width="180" height="36" rx="6" stroke-width="0.5" fill="#fff1f2" stroke="#fb7185"/><text class="ts" x="550" y="310" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#be123c">Reconciliation flows</text></g>
+<line x1="220" y1="62" x2="248" y2="62" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
+<line x1="430" y1="62" x2="458" y2="62" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
+<text class="ts" x="130" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4b5563">Foundation</text>
+<text class="ts" x="340" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4b5563">Webhook infrastructure</text>
+<text class="ts" x="550" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4b5563">Runtime payment flow</text>
+<g class="c-gray"><rect x="40" y="370" width="600" height="44" rx="8" stroke-width="0.5" fill="#f3f4f6" stroke="#9ca3af"/><text class="th" x="340" y="392" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="bold" font-size="14" fill="#374151">Full Razorpay support merged — ~3,000 lines</text></g>
+<line x1="130" y1="358" x2="130" y2="368" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
+<line x1="340" y1="358" x2="340" y2="368" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
+<line x1="550" y1="358" x2="550" y2="368" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
+</svg>

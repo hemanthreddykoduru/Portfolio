@@ -50,7 +50,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white selection:bg-neutral-100 font-sans">
+    <div className="min-h-screen selection:bg-neutral-200 dark:selection:bg-neutral-800 font-sans transition-colors">
       <Navbar />
       
       <main>
@@ -96,11 +96,11 @@ export default function Home() {
         </section>
 
         {/* Projects Grid */}
-        <SectionWrapper id="projects" className="max-w-5xl mx-auto px-6 py-16 md:py-24 border-t border-neutral-100">
+        <SectionWrapper id="projects" className="max-w-5xl mx-auto px-6 py-16 md:py-24 border-t border-neutral-100 dark:border-neutral-800 transition-colors">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
               <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2 font-display">Selected Work</h2>
-              <p className="text-3xl font-display font-black tracking-tight text-black">Recent Projects</p>
+              <p className="text-3xl font-display font-black tracking-tight text-black dark:text-white transition-colors">Recent Projects</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
