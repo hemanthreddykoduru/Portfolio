@@ -27,7 +27,7 @@
 <text class="ts" x="130" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4b5563">Foundation</text>
 <text class="ts" x="340" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4b5563">Webhook infrastructure</text>
 <text class="ts" x="550" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4b5563">Runtime payment flow</text>
-<g class="c-gray"><rect x="40" y="370" width="600" height="44" rx="8" stroke-width="0.5" fill="#f3f4f6" stroke="#9ca3af"/><text class="th" x="340" y="392" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="bold" font-size="14" fill="#374151">Full Razorpay support merged — ~3,000 lines</text></g>
+<g class="c-gray"><rect x="40" y="370" width="600" height="44" rx="8" stroke-width="0.5" fill="#f3f4f6" stroke="#9ca3af"/><text class="th" x="340" y="392" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="bold" font-size="14" fill="#374151">Razorpay is live in InsForge</text></g>
 <line x1="130" y1="358" x2="130" y2="368" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
 <line x1="340" y1="358" x2="340" y2="368" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
 <line x1="550" y1="358" x2="550" y2="368" class="arr" marker-end="url(#arrow)" stroke="#9ca3af"/>
