@@ -165,9 +165,28 @@ When building payment systems, you are forced to answer uncomfortable questions:
 
 I didn't have clean answers to all of those questions at first. Working through them, refining the architecture, and edge-case testing the system was the most valuable part of this open-source journey.
 
+## How Developers Use It
+
+With the integration complete, InsForge Payments now supports Razorpay seamlessly alongside Stripe. You can configure test and live Razorpay keys directly in the Payments settings, and InsForge handles mirroring your Items, Plans, Orders, and Subscriptions into the payments schema.
+
+Razorpay works fundamentally differently from Stripe Checkout: instead of relying on a hosted redirect page, your backend creates the Order or Subscription, your frontend opens the Razorpay Checkout modal, and InsForge automatically verifies the returned signature for you.
+
+Here is what the developer experience looks like now:
+
+\`\`\`typescript
+const { data, error } = await insforge.payments.razorpay.createOrder("test", {
+  amount: 50000,
+  currency: "INR",
+  receipt: "order_123",
+  subject: { type: "user", id: user.id },
+});
+\`\`\`
+
+The response includes native \`checkoutOptions\`, which are ready to pass straight into \`new Razorpay(options).open()\`. Subscriptions even come with backend routes to cancel, pause, and resume out of the box, all guarded by RLS policies.
+
 ## Get Started
 
-The Razorpay integration is now live in InsForge. If you are building a SaaS in India, you can now use InsForge's agentic workflow to wire up a production-ready Razorpay checkout in minutes.
+The Razorpay integration is now live in InsForge (v2.2.1+). If you are building a SaaS in India, you can now use InsForge's agentic workflow to wire up a production-ready Razorpay checkout in minutes.
 
 A huge thanks to the InsForge maintainers for their patience and detailed architectural discussions throughout this process.
 
@@ -178,6 +197,7 @@ If you are interested in the code, you can view the core PRs here:
 - [PR #1490: Runtime Payment Flow](https://github.com/InsForge/InsForge/pull/1490)
 
 You can also view the related architectural discussions and issues:
+- [Issue #1368: Razorpay Integration Tracking](https://github.com/InsForge/InsForge/issues/1368)
 - [Issue #1486: Webhook Support](https://github.com/InsForge/InsForge/issues/1486)
 - [Issue #1491: Idempotent Payment Flow](https://github.com/InsForge/InsForge/issues/1491)
 `
