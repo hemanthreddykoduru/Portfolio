@@ -34,7 +34,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-[100] w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-black/80 backdrop-blur-md transition-colors">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="text-xl font-black tracking-tighter text-black dark:text-white">
-          KHR
+          Hemanth Portfolio
         </Link>
         
         {/* Desktop Links */}
