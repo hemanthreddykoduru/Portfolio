@@ -28,7 +28,7 @@ export default function BlogList() {
                 className="border border-neutral-200 dark:border-neutral-800 p-8 hover:border-black dark:hover:border-neutral-500 transition-all duration-300 group flex flex-col h-full bg-white dark:bg-neutral-900 shadow-sm hover:shadow-xl rounded-2xl"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-display font-black tracking-tight text-black dark:text-white transition-colors">{blog.title}</h3>
+                  <h3 className="text-xl font-display font-black tracking-tight text-black dark:text-white transition-colors">{blog.displayTitle || blog.title}</h3>
                 </div>
                 <p className="text-xs text-neutral-400 font-bold uppercase tracking-widest mb-4 transition-colors">
                   {blog.date}
