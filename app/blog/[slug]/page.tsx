@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </Link>
 
             <header className="mb-12">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-black tracking-tight text-black dark:text-white leading-tight mb-4 transition-colors">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-black tracking-tight text-black dark:text-white leading-tight mb-4 transition-colors">
                 {blog.displayTitle || blog.title}
               </h1>
               
