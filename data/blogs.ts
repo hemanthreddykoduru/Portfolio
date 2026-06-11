@@ -176,6 +176,10 @@ If you are interested in the code, you can view the core PRs here:
 - [PR #1382: Foundational Provider & Sync](https://github.com/InsForge/InsForge/pull/1382)
 - [PR #1485: Webhook Infrastructure](https://github.com/InsForge/InsForge/pull/1485)
 - [PR #1490: Runtime Payment Flow](https://github.com/InsForge/InsForge/pull/1490)
+
+You can also view the related architectural discussions and issues:
+- [Issue #1486: Webhook Support](https://github.com/InsForge/InsForge/issues/1486)
+- [Issue #1491: Idempotent Payment Flow](https://github.com/InsForge/InsForge/issues/1491)
 `
   }
 ];
