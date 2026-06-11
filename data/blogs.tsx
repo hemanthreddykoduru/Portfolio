@@ -177,6 +177,7 @@ Razorpay works fundamentally differently from Stripe Checkout: instead of relyin
 
 Here is what the developer experience looks like now:
 
+**1. Create the Order on the Backend**
 \`\`\`typescript
 const { data, error } = await insforge.payments.razorpay.createOrder("test", {
   amount: 50000,
@@ -185,8 +186,22 @@ const { data, error } = await insforge.payments.razorpay.createOrder("test", {
   subject: { type: "user", id: user.id },
 });
 \`\`\`
+The response includes native \`checkoutOptions\`, which are ready to pass straight into \`new Razorpay(options).open()\` on the frontend.
 
-The response includes native \`checkoutOptions\`, which are ready to pass straight into \`new Razorpay(options).open()\`. Subscriptions even come with backend routes to cancel, pause, and resume out of the box, all guarded by RLS policies.
+**2. Verify the Signature**
+Once the user pays, Razorpay returns a signature to the frontend. You pass it back to InsForge for secure verification:
+\`\`\`typescript
+await insforge.payments.razorpay.verifyOrder('test', {
+  orderId: response.razorpay_order_id,
+  paymentId: response.razorpay_payment_id,
+  signature: response.razorpay_signature
+});
+\`\`\`
+
+**3. Durable Fulfillment via Webhooks**
+Signature verification proves the immediate callback came from Razorpay, but production-grade fulfillment should always be asynchronous. InsForge logs every verified event into \`payments.webhook_events\`. Developers simply write a Postgres database trigger on that table to safely grant access to the user once the \`payment.captured\` or \`order.paid\` event arrives.
+
+Subscriptions even come with backend routes to cancel, pause, and resume out of the box, all guarded by Row Level Security (RLS) policies.
 
 ## Get Started
 
