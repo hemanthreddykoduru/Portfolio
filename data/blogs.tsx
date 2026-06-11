@@ -33,9 +33,13 @@ export const blogs: Blog[] = [
     coverImage: "/images/razorpay-insforge.png",
     tags: ["open-source", "payments", "razorpay", "integration"],
     content: `
-If you are building a modern SaaS platform in India, Stripe isn't always an option—Razorpay is the standard. A few days ago, I noticed that [InsForge](https://www.insforge.dev/), a [Y Combinator-backed](https://www.ycombinator.com/companies/insforge) open-source framework, had incredible Stripe support but completely lacked Razorpay integration. For any developer targeting the Indian market, this was a hard blocker.
+If you are building a modern SaaS platform in India, Stripe isn't always an option—Razorpay is the standard. A few days ago, I noticed that [InsForge](https://www.insforge.dev/), a [Y Combinator-backed](https://www.ycombinator.com/companies/insforge) open-source Backend-as-a-Service (BaaS), had incredible Stripe support but completely lacked Razorpay integration. For any developer targeting the Indian market, this was a hard blocker.
 
 I decided to fix that. Over the course of three major pull requests and roughly 3,000 lines of code, I architected and merged the complete Razorpay runtime payment flow into the InsForge core, bringing it to full feature parity with Stripe.
+
+![Before: The platform was completely locked to Stripe, isolating developers building for the Indian market.](/images/insforge-before.png)
+
+![After: Razorpay is a first-class citizen, fully integrated into the dashboard and runtime SDK.](/images/insforge-after.png)
 
 Here is a look at how production payment systems actually get built, and the architectural friction I had to solve along the way.
 
@@ -156,7 +160,7 @@ To understand why this rigorous architecture was necessary, let's look at three 
 **The Problem:** What happens if the first order attempt genuinely fails (e.g., bad currency configuration), and the frontend retries using the same idempotency key? A naive implementation might return a silent success or ignore the failure.
 **The Fix:** The automated AI reviewers actually caught this exact edge case during code review. If an order fails, the server explicitly returns a \`409 Conflict\`. This explicitly forces the client to generate a *new* idempotency key and start fresh, ensuring the user gets clear error feedback instead of being stuck in a silent failure loop.
 
-## What You Watch in InsForge, and What Still Belongs in Razorpay
+## Battle-Testing the Architecture
 
 Writing the code was the easy part. The harder part—and the real education—came during the rigorous code review process with the maintainers and InsForge's automated AI reviewers.
 
@@ -219,6 +223,9 @@ You can also view the related architectural discussions and issues:
 - [Issue #1368: Razorpay Integration Tracking](https://github.com/InsForge/InsForge/issues/1368)
 - [Issue #1486: Webhook Support](https://github.com/InsForge/InsForge/issues/1486)
 - [Issue #1491: Idempotent Payment Flow](https://github.com/InsForge/InsForge/issues/1491)
+
+Documentation:
+- [Razorpay Integration Guide on InsForge.dev](https://docs.insforge.dev/payments/razorpay)
 `
   }
 ];
