@@ -225,7 +225,7 @@ You can also view the related architectural discussions and issues:
 - [Issue #1491: Idempotent Payment Flow](https://github.com/InsForge/InsForge/issues/1491)
 
 Documentation:
-- [Razorpay Integration Guide on InsForge.dev](https://docs.insforge.dev/payments/razorpay)
+- [Razorpay Integration Guide on InsForge.dev](https://docs.insforge.dev/core-concepts/payments/razorpay)
 `
   }
 ];
