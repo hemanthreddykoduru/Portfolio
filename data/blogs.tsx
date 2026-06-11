@@ -20,7 +20,8 @@ export type Blog = {
 export const blogs: Blog[] = [
   {
     slug: "bringing-razorpay-to-insforge",
-    title: "Full Razorpay support merged - ~3,000 lines",
+    title: "Bringing Razorpay to InsForge: Building a Production-Grade Payment Flow for a Y Combinator-Backed Open Source Platform",
+    displayTitle: <>Bringing Razorpay to <span className="font-mono text-blue-600 dark:text-blue-400">InsForge</span>: Building a Production-Grade Payment Flow for a Y Combinator-Backed Open Source Platform</>,
     date: "08 Jun 2026",
     readTime: "7 minutes",
     author: {
