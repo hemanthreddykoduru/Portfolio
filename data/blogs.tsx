@@ -37,10 +37,6 @@ If you are building a modern SaaS platform in India, Stripe isn't always an opti
 
 I decided to fix that. Over the course of three major pull requests and roughly 3,000 lines of code, I architected and merged the complete Razorpay runtime payment flow into the InsForge core, bringing it to full feature parity with Stripe.
 
-![Before: The platform was completely locked to Stripe, isolating developers building for the Indian market.](/images/insforge-before.png)
-
-![After: Razorpay is a first-class citizen, fully integrated into the dashboard and runtime SDK.](/images/insforge-after.png)
-
 Here is a look at how production payment systems actually get built, and the architectural friction I had to solve along the way.
 
 ## Why Razorpay Makes Sense, and Where the Friction Lies
@@ -172,6 +168,10 @@ When building payment systems, you are forced to answer uncomfortable questions:
 - What does this look like under concurrent load in six months when I'm not around to fix it?
 
 I didn't have clean answers to all of those questions at first. Working through them, refining the architecture, and edge-case testing the system was the most valuable part of this open-source journey.
+
+![Before: The platform was completely locked to Stripe, isolating developers building for the Indian market.](/images/insforge-before.png)
+
+![After: Razorpay is a first-class citizen, fully integrated into the dashboard and runtime SDK.](/images/insforge-after.png)
 
 ## How Developers Use It
 
