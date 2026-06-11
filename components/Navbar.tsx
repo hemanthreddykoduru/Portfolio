@@ -17,6 +17,7 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
     { name: "Resume", href: "/resume.pdf", isExternal: true },
+    { name: "Book a Call", href: "https://cal.com/hemanth.reddyk", isExternal: true },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, targetId: string) => {
