@@ -169,8 +169,10 @@ When building payment systems, you are forced to answer uncomfortable questions:
 
 I didn't have clean answers to all of those questions at first. Working through them, refining the architecture, and edge-case testing the system was the most valuable part of this open-source journey.
 
+**Before:**
 ![Before: The platform was completely locked to Stripe, isolating developers building for the Indian market.](/images/insforge-before.png)
 
+**After:**
 ![After: Razorpay is a first-class citizen, fully integrated into the dashboard and runtime SDK.](/images/insforge-after.png)
 
 ## How Developers Use It
