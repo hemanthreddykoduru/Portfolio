@@ -211,6 +211,8 @@ Subscriptions even come with backend routes to cancel, pause, and resume out of 
 
 The Razorpay integration is now live in InsForge (v2.2.1+). If you are building a SaaS in India, you can now use InsForge's agentic workflow to wire up a production-ready Razorpay checkout in minutes.
 
+![InsForge v2.2.1 Release Notes](/images/insforge-release.png)
+
 A huge thanks to the InsForge maintainers for their patience and detailed architectural discussions throughout this process.
 
 If you are interested in the code, you can view the core PRs here:
