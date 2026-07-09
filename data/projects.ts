@@ -114,6 +114,56 @@ export const projects: Project[] = [
     "image": "/images/notesbay.png"
   },
   {
+    "slug": "blackfront",
+    "name": "BlackFront",
+    "tagline": "A GitHub repository",
+    "description": "A GitHub repository",
+    "fullDescription": "A GitHub repository",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [],
+    "live": "",
+    "github": "https://github.com/hemanthreddykoduru/BlackFront",
+    "image": "/images/localshare.png"
+  },
+  {
+    "slug": "cal.diy",
+    "name": "cal.diy",
+    "tagline": "Scheduling infrastructure for absolutely everyone.",
+    "description": "Scheduling infrastructure for absolutely everyone.",
+    "fullDescription": "Scheduling infrastructure for absolutely everyone.",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [],
+    "live": "https://cal.diy",
+    "github": "https://github.com/hemanthreddykoduru/cal.diy",
+    "image": "/images/localshare.png"
+  },
+  {
+    "slug": "callforge",
+    "name": "CallForge",
+    "tagline": "A GitHub repository",
+    "description": "A GitHub repository",
+    "fullDescription": "A GitHub repository",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [
+      "TypeScript"
+    ],
+    "live": "",
+    "github": "https://github.com/hemanthreddykoduru/CallForge",
+    "image": "/images/localshare.png"
+  },
+  {
     "slug": "cricket25",
     "name": "Cricket25",
     "tagline": "A GitHub repository",
@@ -182,6 +232,24 @@ export const projects: Project[] = [
     "image": "/images/localshare.png"
   },
   {
+    "slug": "insforge",
+    "name": "InsForge",
+    "tagline": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+    "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+    "fullDescription": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [
+      "TypeScript"
+    ],
+    "live": "https://insforge.dev",
+    "github": "https://github.com/hemanthreddykoduru/InsForge",
+    "image": "/images/localshare.png"
+  },
+  {
     "slug": "isro-air",
     "name": "ISRO-AIR",
     "tagline": "A GitHub repository",
@@ -197,6 +265,76 @@ export const projects: Project[] = [
     ],
     "live": "https://isro-air.vercel.app",
     "github": "https://github.com/hemanthreddykoduru/ISRO-AIR",
+    "image": "/images/localshare.png"
+  },
+  {
+    "slug": "local-share",
+    "name": "Local-Share",
+    "tagline": "A GitHub repository",
+    "description": "A GitHub repository",
+    "fullDescription": "A GitHub repository",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [
+      "TypeScript"
+    ],
+    "live": "https://local-share-sooty.vercel.app",
+    "github": "https://github.com/hemanthreddykoduru/Local-Share",
+    "image": "/images/localshare.png"
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "tagline": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "fullDescription": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [],
+    "live": "https://n8n.io",
+    "github": "https://github.com/hemanthreddykoduru/n8n",
+    "image": "/images/localshare.png"
+  },
+  {
+    "slug": "notes-bay",
+    "name": "Notes-Bay",
+    "tagline": "A GitHub repository",
+    "description": "A GitHub repository",
+    "fullDescription": "A GitHub repository",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [
+      "JavaScript"
+    ],
+    "live": "https://student-notes-fawn.vercel.app",
+    "github": "https://github.com/hemanthreddykoduru/Notes-Bay",
+    "image": "/images/localshare.png"
+  },
+  {
+    "slug": "opencode",
+    "name": "opencode",
+    "tagline": "The open source coding agent.",
+    "description": "The open source coding agent.",
+    "fullDescription": "The open source coding agent.",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [
+      "TypeScript"
+    ],
+    "live": "https://opencode.ai",
+    "github": "https://github.com/hemanthreddykoduru/opencode",
     "image": "/images/localshare.png"
   },
   {
@@ -254,11 +392,11 @@ export const projects: Project[] = [
     "image": "/images/localshare.png"
   },
   {
-    "slug": "prajna-dashboard",
-    "name": "PRAJNA-DASHBOARD",
-    "tagline": "A GitHub repository",
-    "description": "A GitHub repository",
-    "fullDescription": "A GitHub repository",
+    "slug": "prajna-personal",
+    "name": "PRAJNA-PERSONAL",
+    "tagline": "URL",
+    "description": "URL",
+    "fullDescription": "URL",
     "features": [
       "GitHub Repo"
     ],
@@ -267,13 +405,13 @@ export const projects: Project[] = [
     "stack": [
       "TypeScript"
     ],
-    "live": "",
-    "github": "https://github.com/hemanthreddykoduru/PRAJNA-DASHBOARD",
+    "live": "https://prajna.hemanthreddykoduru.dev/",
+    "github": "https://github.com/hemanthreddykoduru/PRAJNA-PERSONAL",
     "image": "/images/localshare.png"
   },
   {
-    "slug": "prajna-personal",
-    "name": "PRAJNA-PERSONAL",
+    "slug": "quickxerox",
+    "name": "QuickXerox",
     "tagline": "A GitHub repository",
     "description": "A GitHub repository",
     "fullDescription": "A GitHub repository",
@@ -286,7 +424,7 @@ export const projects: Project[] = [
       "TypeScript"
     ],
     "live": "",
-    "github": "https://github.com/hemanthreddykoduru/PRAJNA-PERSONAL",
+    "github": "https://github.com/hemanthreddykoduru/QuickXerox",
     "image": "/images/localshare.png"
   },
   {
@@ -323,6 +461,24 @@ export const projects: Project[] = [
     ],
     "live": "https://smart-attendence-ten.vercel.app",
     "github": "https://github.com/hemanthreddykoduru/Smart-Attendence",
+    "image": "/images/localshare.png"
+  },
+  {
+    "slug": "space-finder",
+    "name": "space-finder",
+    "tagline": "A GitHub repository",
+    "description": "A GitHub repository",
+    "fullDescription": "A GitHub repository",
+    "features": [
+      "GitHub Repo"
+    ],
+    "role": "Developer",
+    "year": "2026",
+    "stack": [
+      "TypeScript"
+    ],
+    "live": "",
+    "github": "https://github.com/hemanthreddykoduru/space-finder",
     "image": "/images/localshare.png"
   },
   {
