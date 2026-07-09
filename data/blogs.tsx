@@ -33,6 +33,8 @@ export const blogs: Blog[] = [
     coverImage: "/images/razorpay-insforge.png",
     tags: ["open-source", "payments", "razorpay", "integration"],
     content: `
+> 🏆 **Official Recognition:** The InsForge team published a dedicated article on their engineering blog highlighting my contribution to their core platform. Read their official post: [Introducing the InsForge and Razorpay Integration](https://insforge.dev/blog/insforge-razorpay-integration)
+
 If you are building a modern SaaS platform in India, Stripe isn't always an option—Razorpay is the standard. A few days ago, I noticed that [InsForge](https://www.insforge.dev/), a [Y Combinator-backed](https://www.ycombinator.com/companies/insforge) open-source Backend-as-a-Service (BaaS), had incredible Stripe support but completely lacked Razorpay integration. For any developer targeting the Indian market, this was a hard blocker.
 
 I decided to fix that. Over the course of three major pull requests and roughly 3,000 lines of code, I architected and merged the complete Razorpay runtime payment flow into the InsForge core, bringing it to full feature parity with Stripe.
